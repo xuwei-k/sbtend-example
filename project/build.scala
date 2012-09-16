@@ -4,10 +4,8 @@ object build extends Build{
 
   lazy val root = Project(
     "root",
-    file(".")
+    file("foo")
   ).settings(
-    sbtend.Plugin.sbtendSettings ++ Seq(
-      sbtend.Plugin.SbtendKeys.xtendSource in Compile := file("foo")
-    ) : _*
+    sbtend.Plugin.sbtendSettings:_*
   )
 }
